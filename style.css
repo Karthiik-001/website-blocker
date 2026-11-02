@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background-color: #f3f5fa;
+  color: #111111;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+main {
+  width: min(100% - 32px, 760px);
+  margin: 0 auto;
+  padding: 22px 0 42px;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 26px;
+}
+
+h1 {
+  margin: 0;
+  color: #24479b;
+  font-size: clamp(2rem, 5vw, 2.45rem);
+  line-height: 1.2;
+}
+
+section {
+  margin: 0 auto 24px;
+}
+
+h2 {
+  margin: 0 0 14px;
+  font-size: 1.25rem;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+input {
+  min-height: 30px;
+  padding: 6px 10px;
+  border: 1px solid #999999;
+  border-radius: 2px;
+  background-color: #ffffff;
+  color: #111111;
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="url"] {
+  width: min(100%, 342px);
+}
+
+input[type="number"] {
+  width: 82px;
+  text-align: center;
+}
+
+input:focus,
+button:focus-visible {
+  outline: 3px solid #9bb9f4;
+  outline-offset: 2px;
+}
+
+button {
+  min-height: 30px;
+  padding: 6px 15px;
+  border: 1px solid #1e3d8d;
+  border-radius: 4px;
+  background-color: #24479b;
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+button:hover {
+  background-color: #1b3784;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+table {
+  width: min(100%, 390px);
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+caption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+th,
+td {
+  padding: 8px 10px;
+  border: 1px solid #222222;
+  text-align: center;
+}
+
+th {
+  background-color: #dce5f8;
+  font-weight: 700;
+}
+
+td button {
+  min-height: 24px;
+  padding: 3px 10px;
+  border-color: #b52e25;
+  border-radius: 4px;
+  background-color: #c83c31;
+  font-size: 0.82rem;
+}
+
+td button:hover {
+  background-color: #a82d25;
+}
+
+#focus-duration + span {
+  margin-left: 4px;
+}
+
+#focus-mode-heading {
+  margin-bottom: 12px;
+}
+
+#focus-mode-heading ~ div {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+#focus-status {
+  width: fit-content;
+  min-width: 180px;
+  margin: 14px auto 0;
+  padding: 9px 16px;
+  border: 1px solid #999999;
+  border-radius: 4px;
+  background-color: #e4e4e4;
+  font-weight: 700;
+}
+
+#focus-status.on,
+#focus-status.active {
+  border-color: #3d8b50;
+  background-color: #d7f0dc;
+  color: #17662a;
+}
+
+#access-notification {
+  width: min(100%, 430px);
+  min-height: 0;
+  margin: 12px auto 0;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+#access-notification.success,
+#access-notification.allowed {
+  padding: 9px 12px;
+  border-color: #5a9e67;
+  background-color: #d5f0da;
+  color: #17662a;
+}
+
+#access-notification.error,
+#access-notification.blocked {
+  padding: 9px 12px;
+  border-color: #bd5b5b;
+  background-color: #f7d8d8;
+  color: #983333;
+}
+
+#access-log-heading {
+  margin-bottom: 10px;
+}
+
+#access-log-heading + p {
+  margin: 0 0 10px;
+}
+
+#blocked-count {
+  color: #c83c31;
+  font-weight: 700;
+}
+
+#allowed-count {
+  color: #23833a;
+  font-weight: 700;
+}
+
+#access-log td:nth-child(3) {
+  font-weight: 700;
+}
+
+#access-log td.blocked,
+#access-log td.status-blocked {
+  color: #c83c31;
+}
+
+#access-log td.allowed,
+#access-log td.status-allowed {
+  color: #23833a;
+}
+
+@media (max-width: 520px) {
+  main {
+    width: min(100% - 20px, 760px);
+    padding-top: 18px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  form input[type="text"],
+  form input[type="url"] {
+    width: min(100%, 342px);
+  }
+
+  form button {
+    width: min(100%, 220px);
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  th,
+  td {
+    padding: 7px 5px;
+  }
+}

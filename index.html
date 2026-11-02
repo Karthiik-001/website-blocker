@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Blocker for Productivity</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Website Blocker for Productivity</h1>
+    </header>
+
+    <section aria-labelledby="block-list-heading">
+      <h2 id="block-list-heading">Block List</h2>
+
+      <form id="block-list-form">
+        <label for="website-to-block">Website to block</label>
+        <input
+          type="text"
+          id="website-to-block"
+          name="website-to-block"
+          placeholder="Enter website to block (e.g. facebook.com)"
+        >
+        <button type="submit">Add to Block List</button>
+        <button type="button" id="load-sample-sites">Load Sample Sites</button>
+      </form>
+
+      <table>
+        <caption>Blocked websites</caption>
+        <thead>
+          <tr>
+            <th scope="col">S.No</th>
+            <th scope="col">Website</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody id="block-list">
+          <tr>
+            <td>1</td>
+            <td>facebook.com</td>
+            <td><button type="button">Remove</button></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>instagram.com</td>
+            <td><button type="button">Remove</button></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>youtube.com</td>
+            <td><button type="button">Remove</button></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>twitter.com</td>
+            <td><button type="button">Remove</button></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>netflix.com</td>
+            <td><button type="button">Remove</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="focus-mode-heading">
+      <h2 id="focus-mode-heading">Focus Mode</h2>
+
+      <label for="focus-duration">Focus duration</label>
+      <input
+        type="number"
+        id="focus-duration"
+        name="focus-duration"
+        value="25"
+        min="1"
+        max="180"
+      >
+      <span>minutes</span>
+
+      <div>
+        <button type="button" id="start-focus">Start Focus</button>
+        <button type="button" id="stop-focus">Stop Focus</button>
+      </div>
+
+      <p id="focus-status" aria-live="polite">Focus Mode: OFF</p>
+    </section>
+
+    <section aria-labelledby="website-access-heading">
+      <h2 id="website-access-heading">Test Website Access</h2>
+
+      <form id="website-access-form">
+        <label for="website-to-test">Website URL to test</label>
+        <input
+          type="text"
+          id="website-to-test"
+          name="website-to-test"
+          placeholder="Enter URL to visit (e.g. www.youtube.com)"
+        >
+        <button type="submit">Visit Website</button>
+      </form>
+
+      <p id="access-notification" role="status" aria-live="polite"></p>
+    </section>
+
+    <section aria-labelledby="access-log-heading">
+      <h2 id="access-log-heading">Access Log</h2>
+
+      <p>
+        Blocked: <span id="blocked-count">0</span>
+        Allowed: <span id="allowed-count">0</span>
+      </p>
+
+      <table>
+        <caption>Website access requests</caption>
+        <thead>
+          <tr>
+            <th scope="col">Time</th>
+            <th scope="col">Website</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody id="access-log">
+          <tr>
+            <td colspan="3">No requests yet</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
